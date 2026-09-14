@@ -3,9 +3,699 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Master Nodejs</title>
+    <title>Tech Business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1>we are mastring nodejs</h1>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Sidebar (Hidden by Default) -->
+    <div
+      id="sidebar"
+      class="fixed left-0 top-0 w-64 h-full bg-gray-900 text-white transform -translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <button id="closeMenu" class="text-white absolute right-4 top-4 text-2xl">
+        ✖
+      </button>
+      <ul class="mt-16 space-y-4 text-lg font-semibold">
+        <li>
+          <a href="#hero" class="block px-6 py-2 hover:bg-gray-700">🏠 Home</a>
+        </li>
+        <li>
+          <a href="#about" class="block px-6 py-2 hover:bg-gray-700"
+            >ℹ️ About</a
+          >
+        </li>
+        <li>
+          <a href="#services" class="block px-6 py-2 hover:bg-gray-700"
+            >💼 Services</a
+          >
+        </li>
+        <li>
+          <a href="#team" class="block px-6 py-2 hover:bg-gray-700">👨‍💻 Team</a>
+        </li>
+        <li>
+          <a href="#clients" class="block px-6 py-2 hover:bg-gray-700"
+            >🏢 Clients</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="block px-6 py-2 hover:bg-gray-700"
+            >📞 Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-extrabold text-blue-600">Monazite
+          Technologies</h1>
+        <nav class="hidden md:flex space-x-6 text-lg">
+          <a href="#hero" class="hover:text-blue-600">Home</a>
+          <a href="#about" class="hover:text-blue-600">About</a>
+          <a href="#services" class="hover:text-blue-600">Services</a>
+          <a href="#team" class="hover:text-blue-600">Team</a>
+          <a href="#clients" class="hover:text-blue-600">Clients</a>
+          <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+        <button id="openMenu" class="md:hidden text-2xl">☰</button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="h-screen flex flex-col items-center justify-center text-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6"
+    >
+      <div class="container mx-auto">
+        <h1
+          class="text-5xl sm:text-6xl font-extrabold leading-tight animate-fade-in"
+        >
+          🚀 Transforming Ideas Into Reality
+        </h1>
+        <p class="text-lg sm:text-xl mt-4 max-w-2xl mx-auto animate-fade-in">
+          Empowering businesses with cutting-edge technology to drive growth and
+          innovation.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div
+          class="mt-6 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+        >
+          <a
+            href="#contact"
+            class="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-blue-700 hover:text-white transition duration-300"
+          >
+            Get Started
+          </a>
+          <a
+            href="#services"
+            class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-white hover:text-blue-600 transition duration-300"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Background Overlay (Optional for Effect) -->
+      <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="container mx-auto px-6 py-16 text-center">
+      <h2 class="text-4xl font-bold text-blue-600 mb-4">ℹ️ About Us</h2>
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          At <span class="font-semibold text-blue-600">Monazite
+            Technologies</span>, we
+          are committed to pushing the boundaries of technology to create
+          innovative, scalable, and AI-driven solutions. Our team of passionate
+          engineers, designers, and strategists work together to empower
+          businesses through cutting-edge digital transformation.
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+        >
+          <h3 class="text-2xl font-semibold text-blue-600">🚀 Innovation</h3>
+          <p class="mt-2 text-gray-700">
+            We continuously innovate to bring futuristic solutions that enhance
+            business efficiency and user experience.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+        >
+          <h3 class="text-2xl font-semibold text-blue-600">💡 Expertise</h3>
+          <p class="mt-2 text-gray-700">
+            With deep expertise in AI, cloud computing, and software
+            development, we provide top-tier technology solutions.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+        >
+          <h3 class="text-2xl font-semibold text-blue-600">🌍 Global Impact</h3>
+          <p class="mt-2 text-gray-700">
+            Our solutions are trusted by businesses worldwide, making a
+            significant impact across multiple industries.
+          </p>
+        </div>
+      </div>
+
+      <a
+        href="#contact"
+        class="mt-10 inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-blue-700 transition duration-300"
+      >
+        Get in Touch
+      </a>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="bg-gray-100 py-16">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-blue-600 mb-6">💼 Our Services</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          We provide state-of-the-art technology solutions designed to enhance
+          business efficiency, scalability, and digital transformation. From
+          AI-driven automation to cloud-based infrastructure, we help businesses
+          stay ahead in the digital era.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service Card -->
+          <div
+            class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="text-4xl text-blue-600 mb-4 group-hover:scale-110 transition duration-300"
+            >
+              🌍
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-600">
+              Web Development
+            </h3>
+            <p class="mt-3 text-gray-700">
+              Creating responsive, high-performance websites and web
+              applications using modern technologies.
+            </p>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="text-4xl text-blue-600 mb-4 group-hover:scale-110 transition duration-300"
+            >
+              🤖
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-600">
+              AI & Machine Learning
+            </h3>
+            <p class="mt-3 text-gray-700">
+              Leveraging AI-driven insights to automate business processes and
+              enhance decision-making.
+            </p>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="text-4xl text-blue-600 mb-4 group-hover:scale-110 transition duration-300"
+            >
+              ☁️
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-600">
+              Cloud Solutions
+            </h3>
+            <p class="mt-3 text-gray-700">
+              Providing scalable, secure, and cost-effective cloud
+              infrastructure for business operations.
+            </p>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="text-4xl text-blue-600 mb-4 group-hover:scale-110 transition duration-300"
+            >
+              📱
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-600">
+              Mobile App Development
+            </h3>
+            <p class="mt-3 text-gray-700">
+              Designing intuitive and feature-rich mobile apps for Android and
+              iOS platforms.
+            </p>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="text-4xl text-blue-600 mb-4 group-hover:scale-110 transition duration-300"
+            >
+              🔐
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-600">Cybersecurity</h3>
+            <p class="mt-3 text-gray-700">
+              Implementing advanced security measures to protect businesses from
+              cyber threats.
+            </p>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="text-4xl text-blue-600 mb-4 group-hover:scale-110 transition duration-300"
+            >
+              📊
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-600">Data Analytics</h3>
+            <p class="mt-3 text-gray-700">
+              Helping businesses make data-driven decisions with real-time
+              analytics and insights.
+            </p>
+          </div>
+        </div>
+
+        <a
+          href="#contact"
+          class="mt-10 inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-blue-700 transition duration-300"
+        >
+          Get a Free Consultation
+        </a>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="container mx-auto px-6 py-16 text-center">
+      <h2 class="text-4xl font-bold text-blue-600 mb-6">👨‍💻 Meet Our Team</h2>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+        A passionate team of innovators, engineers, and strategists working
+        together to create technology-driven solutions that make an impact.
+      </p>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Team Member Card -->
+        <div
+          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+        >
+          <img
+            src="./assets/rupava-pics.jpeg"
+            alt="John Doe"
+            class="w-32 h-32 mx-auto rounded-full border-4 border-blue-600 group-hover:scale-105 transition duration-300"
+          />
+          <h3 class="text-2xl font-semibold text-blue-600 mt-4">Rupava Baruah</h3>
+          <p class="text-gray-700">(Founder & Director)</p>
+          <div class="mt-4 flex justify-center space-x-4">
+            <a
+              href="#"
+              class="text-blue-600 text-xl hover:text-blue-800 transition duration-300"
+              >🔗</a
+            >
+            <a
+              href="#"
+              class="text-blue-600 text-xl hover:text-blue-800 transition duration-300"
+              >🐦</a
+            >
+            <a
+              href="#"
+              class="text-blue-600 text-xl hover:text-blue-800 transition duration-300"
+              >📘</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+        >
+          <img
+            src="./assets/robin-pics.jpeg"
+            alt="Jane Smith"
+            class="w-32 h-32 mx-auto rounded-full border-4 border-blue-600 group-hover:scale-105 transition duration-300"
+          />
+          <h3 class="text-2xl font-semibold text-blue-600 mt-4">Robin Mahto</h3>
+          <p class="text-gray-700">Frontend Developer</p>
+          <div class="mt-4 flex justify-center space-x-4">
+            <a
+              href="#"
+              class="text-blue-600 text-xl hover:text-blue-800 transition duration-300"
+              >🔗</a
+            >
+            <a
+              href="#"
+              class="text-blue-600 text-xl hover:text-blue-800 transition duration-300"
+              >🐦</a
+            >
+            <a
+              href="#"
+              class="text-blue-600 text-xl hover:text-blue-800 transition duration-300"
+              >📘</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+        >
+          <img
+            src="./assets/sandesh-pics.jpeg"
+            alt="Mike Johnson"
+            class="w-32 h-32 mx-auto rounded-full border-4 border-blue-600 group-hover:scale-105 transition duration-300"
+          />
+          <h3 class="text-2xl font-semibold text-blue-600 mt-4">
+            Sandesh Salunkhe
+          </h3>
+          <p class="text-gray-700">Backend Developer</p>
+          <div class="mt-4 flex justify-center space-x-4">
+            <a
+              href="#"
+              class="text-blue-600 text-xl hover:text-blue-800 transition duration-300"
+              >🔗</a
+            >
+            <a
+              href="#"
+              class="text-blue-600 text-xl hover:text-blue-800 transition duration-300"
+              >🐦</a
+            >
+            <a
+              href="#"
+              class="text-blue-600 text-xl hover:text-blue-800 transition duration-300"
+              >📘</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="#contact"
+        class="mt-10 inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-blue-700 transition duration-300"
+      >
+        Join Our Team
+      </a>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="bg-gray-100 py-16 text-center">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-blue-600 mb-6">🏢 Our Clients</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          We are trusted by industry leaders worldwide, helping businesses scale
+          and innovate with cutting-edge technology solutions.
+        </p>
+
+        <div
+          class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center"
+        >
+          <!-- Client Logos -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://phelixships.in/wp-content/uploads/2017/12/phelixships-logo-new.png"
+              alt="Client 1"
+              class="mx-auto w-32 h-16 object-contain"
+            />
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://phelixships.in/wp-content/uploads/2017/12/phelixships-logo-new.png"
+              alt="Client 2"
+              class="mx-auto w-32 h-16 object-contain"
+            />
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://phelixships.in/wp-content/uploads/2017/12/phelixships-logo-new.png"
+              alt="Client 3"
+              class="mx-auto w-32 h-16 object-contain"
+            />
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://phelixships.in/wp-content/uploads/2017/12/phelixships-logo-new.png"
+              alt="Client 4"
+              class="mx-auto w-32 h-16 object-contain"
+            />
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://phelixships.in/wp-content/uploads/2017/12/phelixships-logo-new.png"
+              alt="Client 5"
+              class="mx-auto w-32 h-16 object-contain"
+            />
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://phelixships.in/wp-content/uploads/2017/12/phelixships-logo-new.png"
+              alt="Client 6"
+              class="mx-auto w-32 h-16 object-contain"
+            />
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://phelixships.in/wp-content/uploads/2017/12/phelixships-logo-new.png"
+              alt="Client 7"
+              class="mx-auto w-32 h-16 object-contain"
+            />
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://phelixships.in/wp-content/uploads/2017/12/phelixships-logo-new.png"
+              alt="Client 8"
+              class="mx-auto w-32 h-16 object-contain"
+            />
+          </div>
+        </div>
+
+        <a
+          href="#contact"
+          class="mt-10 inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-blue-700 transition duration-300"
+        >
+          Become a Partner
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="bg-gray-100 py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-blue-600 text-center mb-6">
+          📞 Get in Touch
+        </h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center">
+          Have a question or want to work with us? Fill out the form below, and
+          we’ll get back to you as soon as possible.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Contact Information -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold text-blue-600 mb-4">
+              📍 Contact Info
+            </h3>
+            <p class="text-gray-700 mb-2">
+              <span class="font-semibold">📧 Email:</span>
+              monazite-technologies@contact.com
+            </p>
+            <p class="text-gray-700 mb-2">
+              <span class="font-semibold">📍 Address:</span> Navi Mumbai, Maharashtra 421204, IN
+            </p>
+            <p class="text-gray-700">
+              <span class="font-semibold">📞 Phone:</span> +91 9987355855
+            </p>
+
+            <!-- Social Media Links -->
+            <div class="mt-6 flex space-x-4">
+              <a
+                href="#"
+                class="text-blue-600 text-2xl hover:text-blue-800 transition"
+                >📘</a
+              >
+              <a
+                href="#"
+                class="text-blue-600 text-2xl hover:text-blue-800 transition"
+                >🐦</a
+              >
+              <a
+                href="#"
+                class="text-blue-600 text-2xl hover:text-blue-800 transition"
+                >🔗</a
+              >
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold text-blue-600 mb-4">
+              📩 Send Us a Message
+            </h3>
+            <form action="#" method="POST">
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-medium"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="message" class="block text-gray-700 font-medium"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div
+        class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+      >
+        <!-- Company Info -->
+        <div>
+          <h2 class="text-3xl font-bold text-blue-400">Monazite
+            Technologies</h2>
+          <p class="mt-2 text-gray-400 max-w-md">
+            Empowering businesses with cutting-edge technology, AI-driven
+            solutions, and seamless digital transformation.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">🌐 Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#hero"
+                class="text-gray-400 hover:text-blue-400 transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-gray-400 hover:text-blue-400 transition"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="text-gray-400 hover:text-blue-400 transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#team"
+                class="text-gray-400 hover:text-blue-400 transition"
+                >Team</a
+              >
+            </li>
+            <li>
+              <a
+                href="#clients"
+                class="text-gray-400 hover:text-blue-400 transition"
+                >Clients</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-gray-400 hover:text-blue-400 transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact & Social Media -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">📍 Contact Us</h3>
+          <p class="text-gray-400">📧 Email: monazite-technologies@contact.com</p>
+          <p class="text-gray-400">📞 Phone: +91 9987355855</p>
+          <p class="text-gray-400">
+            📍 Address: Navi Mumbai, Maharashtra 421204, IN
+          </p>
+
+          <div class="mt-4 flex justify-center md:justify-start space-x-4">
+            <a
+              href="#"
+              class="text-blue-400 text-2xl hover:text-blue-500 transition"
+              >📘</a
+            >
+            <a
+              href="#"
+              class="text-blue-400 text-2xl hover:text-blue-500 transition"
+              >🐦</a
+            >
+            <a
+              href="#"
+              class="text-blue-400 text-2xl hover:text-blue-500 transition"
+              >🔗</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div
+        class="mt-12 border-t border-gray-700 pt-4 text-center text-gray-500 text-sm"
+      >
+        © 2025 monazite-technologies. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Sidebar Toggle JavaScript -->
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const openMenu = document.getElementById("openMenu");
+      const closeMenu = document.getElementById("closeMenu");
+
+      openMenu.addEventListener("click", () => {
+        sidebar.classList.remove("-translate-x-full");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        sidebar.classList.add("-translate-x-full");
+      });
+    </script>
   </body>
 </html>

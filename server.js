@@ -1,9 +1,10 @@
 import http from "http";
 import fs from "fs/promises";
+import path from "path";
 
 const server = http.createServer();
 
-server.on("request", async(req, res) => {
+server.on("request", async (req, res) => {
   res.setHeader("Content-Type", "application/json");
 
   // sending json object
@@ -14,8 +15,13 @@ server.on("request", async(req, res) => {
   };
 
   // sending html
-  const htmlFile = await fs.readdir('./public');
-  console.log(htmlFile);
+  const htmlFile = await fs.readdir("./public");
+
+  htmlFile.forEach(async (file) => {
+    const filePath = path.join("./public", file);
+    const stats = await fs.stat(filePath);
+    
+  });
 
   res.end(JSON.stringify(users));
 });
