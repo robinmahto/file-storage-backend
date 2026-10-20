@@ -1,25 +1,21 @@
-import { createDeepAgent } from "deepagents";
 
-const internetSearch = { googleSearch: {} };  // tools
+function sum(...nums){
+  return nums.reduce((acc, curr)=> acc + curr, 0);
+}
 
-const researchInstructions = `You are an expert researcher. Your job is to conduct thorough research and then write a polished report.
+function product(...books){
+  return books
+}
 
-You have access to an internet search tool as your primary means of gathering information.
+console.log(product("js", "react", "node"));
 
-## \`internet_search\`
+console.log(sum(1,2,3,4,5));
 
-Use this to run an internet search for a given query. You can specify the max number of results to return, the topic, and whether raw content should be included.
-`;
+module.exports = sum;
+exports = product;
 
-const agent = createDeepAgent({
-  model: "google:gemini-3.6-flash",
-  tools: [internetSearch],
-  systemPrompt: researchInstructions,
-});
-
-const result = await agent.invoke({
-  messages: [{ role: "user", content: "What is langgraph?" }],
-});
-
-// Print the agent's response
-console.log(result.messages[result.messages.length - 1].content);
+console.log(exports)
+console.log(module)
+console.log(__dirname)
+console.log(__filename)
+console.log(module.exports === exports);

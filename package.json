@@ -1,12 +1,6 @@
 {
-    "type": "module",
+    "type": "commonjs",
     "scripts": {
         "dev": "node --watch app.js"
-    },
-    "dependencies": {
-        "@langchain/core": "^1.2.14",
-        "deepagents": "^1.14.1",
-        "express": "^5.2.1",
-        "langchain": "^1.5.15"
     }
 }
