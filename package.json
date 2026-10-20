@@ -4,6 +4,9 @@
         "dev": "node --watch app.js"
     },
     "dependencies": {
-        "express": "^5.2.1"
+        "@langchain/core": "^1.2.14",
+        "deepagents": "^1.14.1",
+        "express": "^5.2.1",
+        "langchain": "^1.5.15"
     }
 }
