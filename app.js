@@ -11,11 +11,11 @@ console.log(product("js", "react", "node"));
 
 console.log(sum(1,2,3,4,5));
 
-module.exports = sum;
-exports = product;
+// module.exports = sum;
+exports = "hello"
 
-console.log(exports)
-console.log(module)
-console.log(__dirname)
-console.log(__filename)
-console.log(module.exports === exports);
+// console.log(exports)
+// console.log(module)
+// console.log(__dirname)
+// console.log(__filename)
+// console.log(module.exports === exports);
