@@ -19,3 +19,9 @@ exports = "hello"
 // console.log(__dirname)
 // console.log(__filename)
 // console.log(module.exports === exports);
+
+/***
+ * 1. There are two types of module system
+ *    i) commonjs module(cjs) - default
+ *    ii) ES6 module (mjs) - we need to define type in package.json file
+ */
