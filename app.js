@@ -1,27 +1,15 @@
+import fs from "node:fs/promises";
 
-function sum(...nums){
-  return nums.reduce((acc, curr)=> acc + curr, 0);
-}
+const contentData = await fs.readFile("./text-files/file-3.txt", "utf-8");
 
-function product(...books){
-  return books
-}
+const countWords = {};
 
-console.log(product("js", "react", "node"));
+contentData.split(" ").forEach((word, i) => {
+  if (!countWords[word]) {
+    countWords[word] = 1;
+  } else {
+    countWords[word] += 1;
+  }
+});
 
-console.log(sum(1,2,3,4,5));
-
-// module.exports = sum;
-exports = "hello"
-
-// console.log(exports)
-// console.log(module)
-// console.log(__dirname)
-// console.log(__filename)
-// console.log(module.exports === exports);
-
-/***
- * 1. There are two types of module system
- *    i) commonjs module(cjs) - default
- *    ii) ES6 module (mjs) - we need to define type in package.json file
- */
+console.log(countWords);
